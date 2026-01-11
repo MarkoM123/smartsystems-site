@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "SmartSystems BG",
     images: [
       {
-        url: "public/images/og-cover.jpg",
+        url: "/images/og-cover.jpg",
         width: 1200,
         height: 630,
         alt: "SmartSystems BG – Pametni sistemi",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "SmartSystems BG | Pametni sistemi",
     description:
       "Pametna rešenja za grejanje, sigurnost i automatiku. Beograd.",
-    images: ["/public/images/og-cover.jpg"],
+    images: ["/images/og-cover.jpg"],
   },
 };
 
