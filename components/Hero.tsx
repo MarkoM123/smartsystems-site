@@ -1,33 +1,74 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center max-w-4xl"
-      >
-        <h1 className="text-5xl md:text-6xl font-bold">
-          Pametni sistemi za stanove i objekte
-        </h1>
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
 
-        <p className="mt-6 text-xl text-gray-500">
+      {/* ANIMATED BACKGROUND */}
+      <motion.div
+        className="absolute inset-0"
+        initial={{ backgroundPosition: "0% 50%" }}
+        animate={{ backgroundPosition: "100% 50%" }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "linear",
+        }}
+        style={{
+          background:
+            "radial-gradient(circle at 30% 20%, #0f1c3a, #020617 60%)",
+        }}
+      />
+
+      {/* PARTICLE LAYER (CSS ONLY) */}
+      <div className="absolute inset-0 pointer-events-none particles" />
+
+      {/* VIGNETTE */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/30" />
+
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          className="text-5xl md:text-6xl font-bold text-white"
+        >
+          Pametni sistemi za stanove i objekte
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.8 }}
+          className="mt-8 text-lg md:text-xl text-zinc-300"
+        >
           Grejanje • Sigurnost • Automatika
           <br />
           Beograd
-        </p>
+        </motion.p>
 
-        <a
-          href="/contact"
-          className="inline-block mt-10 px-8 py-4 bg-blue-600 text-white rounded-xl hover:scale-105 transition"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="mt-14"
         >
-          Zatraži procenu
-        </a>
-      </motion.div>
+          <Link
+            href="/contact"
+            className="inline-block px-10 py-4 rounded-xl 
+            bg-blue-600 text-white text-lg font-medium
+            hover:bg-blue-500 transition
+            shadow-lg shadow-blue-600/40"
+          >
+            Zatraži procenu
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 }
