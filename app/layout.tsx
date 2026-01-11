@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SmartSystems BG | Pametni sistemi za dom i objekte",
     description:
-      "Pametno grejanje, sigurnost i automatika. Projektovanje i ugradnja smart home sistema u Beogradu.",
+      "Pametno grejanje, sigurnost i automatika. Projektovanje i ugradnja smart home sistema u Beogradu.Sisteme projektuje inzenjer elektrotehnike",
     url: "https://smartsystems-site1.vercel.app",
     siteName: "SmartSystems BG",
     images: [
       {
-        url: "/images/og-cover.jpg",
+        url: "public/images/og-cover.jpg",
         width: 1200,
         height: 630,
         alt: "SmartSystems BG – Pametni sistemi",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "SmartSystems BG | Pametni sistemi",
     description:
       "Pametna rešenja za grejanje, sigurnost i automatiku. Beograd.",
-    images: ["/images/og-cover.jpg"],
+    images: ["/public/images/og-cover.jpg"],
   },
 };
 
