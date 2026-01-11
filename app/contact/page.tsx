@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function ContactPage() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
 
       {/* BACKGROUND IMAGE */}
       <Image
@@ -16,38 +16,37 @@ export default function ContactPage() {
         className="object-cover"
       />
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/70" />
+      {/* DARK GRADIENT OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/60" />
 
-      {/* CONTENT */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6">
+      {/* CONTENT WRAPPER */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
 
-        <motion.h1
+        {/* HERO TEXT */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-white text-center"
+          className="max-w-2xl mb-20"
         >
-          Kontaktirajte nas
-        </motion.h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
+            Kontaktirajte nas
+          </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
-          className="mt-6 text-lg text-zinc-300 text-center max-w-2xl mx-auto"
-        >
-          Izaberite način komunikacije koji vam najviše odgovara.
-        </motion.p>
+          <p className="mt-6 text-lg text-zinc-300">
+            Izaberite način komunikacije koji vam najviše odgovara.
+          </p>
+        </motion.div>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-10">
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
 
           {/* CALL CARD */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="bg-white/10 backdrop-blur-xl rounded-2xl p-10 text-white shadow-xl"
+            className="max-w-md rounded-2xl bg-zinc-900/80 backdrop-blur-xl p-10 text-white shadow-2xl flex flex-col justify-center"
           >
             <h2 className="text-2xl font-semibold">
               📞 Pozovite nas direktno
@@ -60,7 +59,7 @@ export default function ContactPage() {
 
             <a
               href="tel:+381658258144"
-              className="inline-block mt-8 text-3xl font-bold text-blue-400 hover:text-blue-300 transition"
+              className="mt-8 text-3xl font-bold text-blue-400 hover:text-blue-300 transition"
             >
               +381 65 8258 144
             </a>
@@ -75,7 +74,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="bg-white/95 backdrop-blur-xl rounded-2xl p-8 shadow-2xl text-zinc-900"
+            className="rounded-2xl bg-white/95 backdrop-blur-xl p-10 shadow-2xl text-zinc-900 flex flex-col justify-center"
           >
             <h2 className="text-2xl font-semibold">
               ✍️ Zatražite procenu
