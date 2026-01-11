@@ -1,5 +1,27 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Pametna automatika i rasveta | Smart home rešenja – Beograd",
+  description:
+    "Pametna rasveta, automatizacija prostora i scene prilagođene vašem načinu života. Smart home rešenja u Beogradu.",
+
+  openGraph: {
+    title: "Pametna automatika | SmartSystems BG",
+    description:
+      "Automatizacija rasvete i pametne scene za veći komfor.",
+    url: "https://smartsystems-site.vercel.app/automation",
+    images: [
+      {
+        url: "https://smartsystems-site.vercel.app/images/service-automation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pametna automatika – SmartSystems BG",
+      },
+    ],
+  },
+};
+
+
 export default function AutomationPage() {
   return (
     <main className="bg-zinc-950 text-zinc-100">

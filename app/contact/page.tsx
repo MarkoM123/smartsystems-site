@@ -2,6 +2,27 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+export const metadata = {
+  title: "Kontakt | SmartSystems BG – Pametni sistemi Beograd",
+  description:
+    "Kontaktirajte SmartSystems BG. Pozovite nas ili pošaljite upit za procenu pametnog sistema u vašem prostoru.",
+
+  openGraph: {
+    title: "Kontakt | SmartSystems BG",
+    description:
+      "Zatražite procenu pametnog sistema za vaš dom ili objekat.",
+    url: "https://smartsystems-site.vercel.app/contact",
+    images: [
+      {
+        url: "https://smartsystems-site.vercel.app/images/contact-hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kontakt SmartSystems BG",
+      },
+    ],
+  },
+};
+
 
 export default function ContactPage() {
   return (
