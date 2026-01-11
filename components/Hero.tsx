@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen pt-[88px] flex items-center justify-center overflow-hidden bg-[#020617]">
 
       {/* ANIMATED BACKGROUND */}
       <motion.div

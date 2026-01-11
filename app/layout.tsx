@@ -2,11 +2,53 @@ import "./globals.css";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "SmartSystems BG | Pametni sistemi",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "SmartSystems BG | Pametni sistemi za grejanje, sigurnost i automatiku",
+    template: "%s | SmartSystems BG",
+  },
   description:
-    "Projektovanje i ugradnja pametnih sistema za grejanje, sigurnost i automatiku. Beograd.",
+    "Projektovanje i ugradnja pametnih sistema za grejanje, sigurnost i automatiku. Pametna rešenja za stanove i objekte u Beogradu.",
+  keywords: [
+    "pametni sistemi",
+    "pametno grejanje",
+    "smart home Beograd",
+    "video nadzor Beograd",
+    "alarmni sistemi",
+    "automatika rasveta",
+    "smart home Srbija",
+  ],
+  authors: [{ name: "SmartSystems BG" }],
+  creator: "SmartSystems BG",
+  metadataBase: new URL("https://smartsystems-site1.vercel.app"),
+  openGraph: {
+    title: "SmartSystems BG | Pametni sistemi za dom i objekte",
+    description:
+      "Pametno grejanje, sigurnost i automatika. Projektovanje i ugradnja smart home sistema u Beogradu.",
+    url: "https://smartsystems-site1.vercel.app",
+    siteName: "SmartSystems BG",
+    images: [
+      {
+        url: "/images/og-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SmartSystems BG – Pametni sistemi",
+      },
+    ],
+    locale: "sr_RS",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SmartSystems BG | Pametni sistemi",
+    description:
+      "Pametna rešenja za grejanje, sigurnost i automatiku. Beograd.",
+    images: ["/images/og-cover.jpg"],
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -19,7 +61,7 @@ export default function RootLayout({
 
         {/* HEADER */}
         <header className="fixed top-0 left-0 w-full z-50">
-          <div className="bg-zinc-950/70 backdrop-blur-xl border-b border-white/10">
+  <div className="bg-zinc-900/95 backdrop-blur-xl border-b border-white/10">
             <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
               
               {/* LOGO */}
@@ -53,7 +95,7 @@ export default function RootLayout({
         </header>
 
         {/* PAGE CONTENT */}
-        <main className="pt-24">
+        <main>
           {children}
         </main>
 
