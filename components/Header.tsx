@@ -61,13 +61,13 @@ export default function Header() {
             onClick={() => setOpen(false)}
           />
 
-          {/* MENU PANEL */}
+          {/* MENU PANEL – NO SCROLL, ALL VISIBLE */}
           <div
-            className="fixed top-24 left-1/2 -translate-x-1/2 z-50
+            className="fixed inset-x-0 top-20 z-50 mx-auto
                        w-[92%] max-w-sm
                        bg-zinc-900
                        rounded-2xl border border-white/10
-                       shadow-2xl overflow-hidden"
+                       shadow-2xl"
           >
             {/* CLOSE */}
             <button
@@ -120,11 +120,6 @@ export default function Header() {
                 Kontakt
               </Link>
             </nav>
-
-            {/* SCROLL HINT */}
-            <div className="py-3 text-center text-xs text-zinc-500">
-              Skrolujte za više opcija ↓
-            </div>
           </div>
         </>
       )}
