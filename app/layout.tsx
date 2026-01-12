@@ -96,6 +96,7 @@ export default function RootLayout({
 
       {/* MOBILE MENU */}
       <MobileMenu />
+      
     </div>
   </div>
 </header>
