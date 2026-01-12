@@ -3,6 +3,8 @@ import Intro from "@/components/Intro";
 import Process from "@/components/Process";
 import ServiceCards from "@/components/ServiceCards";
 import Trust from "@/components/Trust";
+import WhyUs from "@/components/WhyUs";
+import ProcessSteps from "@/components/ProcessSteps";
 
 export const metadata = {
   title: "SmartSystems BG | Pametni sistemi za dom i objekte u Beogradu",
@@ -33,7 +35,7 @@ export default function HomePage() {
       <Intro />
       <Process />
       <ServiceCards />
-      <Trust />
+      <WhyUs/>
     </>
   );
 }

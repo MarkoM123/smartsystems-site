@@ -1,28 +1,4 @@
 import Image from "next/image";
-import SecurityWhy from "@/components/SecurityWhy";
-import SecurityUseCases from "@/components/SecurityUseCases";
-import SecurityProcess from "@/components/SecurityProcess";
-
-export const metadata = {
-  title: "Pametna sigurnost | Video nadzor i alarmni sistemi – Beograd",
-  description:
-    "Pametni sistemi sigurnosti: kamere, alarmi, pametne brave i daljinski nadzor. Profesionalna ugradnja u Beogradu.",
-
-  openGraph: {
-    title: "Pametna sigurnost | SmartSystems BG",
-    description:
-      "Video nadzor, alarmi i pametne brave za stanove i objekte.",
-    url: "https://smartsystems-site.vercel.app/security",
-    images: [
-      {
-        url: "https://smartsystems-site.vercel.app/images/service-security.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Pametna sigurnost – SmartSystems BG",
-      },
-    ],
-  },
-};
 
 export default function SecurityPage() {
   return (
@@ -123,49 +99,22 @@ export default function SecurityPage() {
           </div>
         </div>
       </section>
-      <SecurityWhy />
-      <SecurityUseCases />
-      <SecurityProcess />
-      
-<section className="relative py-32 bg-gradient-to-b from-zinc-900 via-zinc-950 to-black text-zinc-100 overflow-hidden">
 
-  {/* SUBTLE GLOW */}
-  <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[180px] rounded-full" />
-
-  {/* DIVIDER */}
-  <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-  <div className="relative max-w-5xl mx-auto px-6 text-center">
-
-    <h3 className="text-4xl md:text-5xl font-bold">
-      Želite da <span className="text-blue-400">zaštitite</span> svoj prostor?
-    </h3>
-
-    <p className="mt-8 text-lg text-zinc-300 max-w-2xl mx-auto">
-      Projektujemo sigurnosni sistem prilagođen vašem objektu, navikama i
-      nivou zaštite koji vam je potreban.
-    </p>
-
-    <div className="mt-14 flex flex-col sm:flex-row gap-6 justify-center">
-      <a
-        href="/contact"
-        className="px-10 py-4 rounded-xl bg-blue-600 text-white text-lg font-medium
-        hover:bg-blue-500 transition"
-      >
-        Zatraži procenu
-      </a>
-
-      <a
-        href="tel:+381658258144"
-        className="px-10 py-4 rounded-xl border border-white/20 text-white text-lg font-medium
-        hover:border-white/40 transition"
-      >
-        Pozovi direktno
-      </a>
-    </div>
-
-  </div>
-</section>
+      {/* CTA */}
+      <section className="py-24 bg-zinc-900 text-center">
+        <h3 className="text-3xl font-semibold">
+          Želite da zaštitite svoj prostor?
+        </h3>
+        <p className="mt-4 text-zinc-400">
+          Projektujemo sigurnosni sistem po meri vašeg objekta.
+        </p>
+        <a
+          href="/contact"
+          className="inline-block mt-8 px-8 py-4 bg-blue-600 rounded-xl"
+        >
+          Kontaktirajte nas
+        </a>
+      </section>
     </main>
   );
 }

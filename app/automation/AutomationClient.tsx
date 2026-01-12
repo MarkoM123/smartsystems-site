@@ -1,30 +1,3 @@
-import Image from "next/image";
-import AutomationWhy from "@/components/AutomationWhy";
-import AutomationUseCases from "@/components/AutomationUseCases";
-import AutomationProcess from "@/components/AutomationProcess";
-
-export const metadata = {
-  title: "Pametna automatika i rasveta | Smart home rešenja – Beograd",
-  description:
-    "Pametna rasveta, automatizacija prostora i scene prilagođene vašem načinu života. Smart home rešenja u Beogradu.",
-
-  openGraph: {
-    title: "Pametna automatika | SmartSystems BG",
-    description:
-      "Automatizacija rasvete i pametne scene za veći komfor.",
-    url: "https://smartsystems-site.vercel.app/automation",
-    images: [
-      {
-        url: "https://smartsystems-site.vercel.app/images/service-automation.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Pametna automatika – SmartSystems BG",
-      },
-    ],
-  },
-};
-
-
 export default function AutomationPage() {
   return (
     <main className="bg-zinc-950 text-zinc-100">
@@ -124,45 +97,21 @@ export default function AutomationPage() {
         </div>
       </section>
 
-      {/* WHY */}
-      <AutomationWhy />
-
-      {/* USE CASES */}
-      <AutomationUseCases />
-
-      {/* PROCESS */}
-      <AutomationProcess />
-
-     <section className="relative py-32 overflow-hidden bg-gradient-to-b from-zinc-900 via-zinc-950 to-black">
-
-  {/* SUBTLE GLOW */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.15),transparent_60%)]" />
-
-  <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-    <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl p-16">
-
-      <h3 className="text-4xl md:text-5xl font-bold text-white">
-        Pametniji prostor. Manje razmišljanja.
-      </h3>
-
-      <p className="mt-6 text-lg text-zinc-300 max-w-2xl mx-auto">
-        Automatizujemo rasvetu, scene i svakodnevne radnje tako da se
-        prostor prilagođava vama – ne obrnuto.
-      </p>
-
-      <a
-        href="/contact"
-        className="inline-flex items-center gap-3 mt-10 px-10 py-4 rounded-xl
-        bg-blue-600 text-white text-lg font-medium
-        hover:bg-blue-500 hover:scale-[1.02] transition"
-      >
-        Kontaktirajte nas
-        <span className="text-xl">→</span>
-      </a>
-    </div>
-  </div>
-</section>
-
+      {/* CTA */}
+      <section className="py-24 bg-zinc-900 text-center">
+        <h3 className="text-3xl font-semibold">
+          Želite pametniji prostor?
+        </h3>
+        <p className="mt-4 text-zinc-400">
+          Automatizacija prilagođena vašem načinu života.
+        </p>
+        <a
+          href="/contact"
+          className="inline-block mt-8 px-8 py-4 bg-blue-600 rounded-xl"
+        >
+          Kontaktirajte nas
+        </a>
+      </section>
     </main>
   );
 }

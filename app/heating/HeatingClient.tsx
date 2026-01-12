@@ -3,9 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import HeatingBeforeAfter from "@/components/Process";
-import HeatingWhy from "@/components/HeatingWhy";
-import HeatingUseCases from "@/components/HeatingUseCases";
-import HeatingProcess from "@/components/HeatingProcess";
 import CTA from "@/components/CTA";
 
 export const metadata = {
@@ -67,10 +64,7 @@ export default function HeatingPage() {
           </motion.p>
         </div>
       </section>
-      <HeatingWhy />
-      <HeatingUseCases />
       <HeatingBeforeAfter />
-      <HeatingProcess />
       <CTA />
     </>
   );
