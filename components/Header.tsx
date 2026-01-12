@@ -52,29 +52,38 @@ export default function Header() {
         </div>
       </header>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* MOBILE MENU */}
       {open && (
         <>
           {/* BACKDROP */}
           <div
-            className="fixed inset-0 bg-black/60 z-40"
+            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
             onClick={() => setOpen(false)}
           />
 
           {/* MENU PANEL */}
           <div
-            className="fixed top-20 left-1/2 -translate-x-1/2 
-                       w-[90%] max-w-sm 
-                       bg-zinc-900/95 backdrop-blur-xl 
-                       rounded-2xl border border-white/10 
-                       shadow-2xl z-50
-                       max-h-[75vh] overflow-y-auto"
+            className="fixed top-24 left-1/2 -translate-x-1/2 z-50
+                       w-[92%] max-w-sm
+                       bg-zinc-900
+                       rounded-2xl border border-white/10
+                       shadow-2xl overflow-hidden"
           >
-            <nav className="flex flex-col divide-y divide-white/10">
+            {/* CLOSE */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-4 right-4 text-zinc-400 hover:text-white text-xl"
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+
+            {/* NAV */}
+            <nav className="flex flex-col divide-y divide-white/10 text-lg">
               <Link
                 href="/"
                 onClick={() => setOpen(false)}
-                className="px-6 py-5 text-lg hover:bg-white/5 transition"
+                className="px-6 py-5 hover:bg-white/5 transition"
               >
                 Početna
               </Link>
@@ -82,7 +91,7 @@ export default function Header() {
               <Link
                 href="/heating"
                 onClick={() => setOpen(false)}
-                className="px-6 py-5 text-lg hover:bg-white/5 transition"
+                className="px-6 py-5 hover:bg-white/5 transition"
               >
                 Grejanje
               </Link>
@@ -90,7 +99,7 @@ export default function Header() {
               <Link
                 href="/security"
                 onClick={() => setOpen(false)}
-                className="px-6 py-5 text-lg hover:bg-white/5 transition"
+                className="px-6 py-5 hover:bg-white/5 transition"
               >
                 Sigurnost
               </Link>
@@ -98,7 +107,7 @@ export default function Header() {
               <Link
                 href="/automation"
                 onClick={() => setOpen(false)}
-                className="px-6 py-5 text-lg hover:bg-white/5 transition"
+                className="px-6 py-5 hover:bg-white/5 transition"
               >
                 Automatika
               </Link>
@@ -106,17 +115,16 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="px-6 py-5 text-lg font-semibold text-blue-400 hover:bg-white/5 transition"
+                className="px-6 py-5 text-blue-400 font-semibold hover:bg-white/5 transition"
               >
                 Kontakt
               </Link>
             </nav>
 
             {/* SCROLL HINT */}
-            <div
-              className="pointer-events-none absolute bottom-0 left-0 w-full h-8 
-                         bg-gradient-to-t from-zinc-900 to-transparent rounded-b-2xl"
-            />
+            <div className="py-3 text-center text-xs text-zinc-500">
+              Skrolujte za više opcija ↓
+            </div>
           </div>
         </>
       )}
