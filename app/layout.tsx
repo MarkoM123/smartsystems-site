@@ -1,6 +1,7 @@
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Script from "next/script";
 
 import type { Metadata } from "next";
 
@@ -58,6 +59,21 @@ export default function RootLayout({
     <html lang="sr" className="bg-zinc-950">
   <body className="bg-zinc-950 text-zinc-100 antialiased overflow-x-hidden">
 
+<Script
+  src={`https://www.googletagmanager.com/gtag/js?id=G-0SR2EKYKTF`}
+  strategy="afterInteractive"
+/>
+
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0SR2EKYKTF', {
+      anonymize_ip: true,
+    });
+  `}
+</Script>
 
         
         {/* HEADER – PRAVA KOMPONENTA */}
