@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -54,69 +53,73 @@ export default function Header() {
       </header>
 
       {/* MOBILE MENU OVERLAY */}
-{open && (
-  <>
-    {/* BACKDROP */}
-    <div
-      className="fixed inset-0 bg-black/60 z-40"
-      onClick={() => setOpen(false)}
-    />
+      {open && (
+        <>
+          {/* BACKDROP */}
+          <div
+            className="fixed inset-0 bg-black/60 z-40"
+            onClick={() => setOpen(false)}
+          />
 
-    {/* MENU PANEL */}
-    <div
-      className="fixed top-20 left-1/2 -translate-x-1/2 
-                 w-[90%] max-w-sm 
-                 bg-zinc-900/95 backdrop-blur-xl 
-                 rounded-2xl border border-white/10 
-                 shadow-2xl z-50
-                 max-h-[75vh] overflow-y-auto"
-    >
-      <nav className="flex flex-col divide-y divide-white/10">
+          {/* MENU PANEL */}
+          <div
+            className="fixed top-20 left-1/2 -translate-x-1/2 
+                       w-[90%] max-w-sm 
+                       bg-zinc-900/95 backdrop-blur-xl 
+                       rounded-2xl border border-white/10 
+                       shadow-2xl z-50
+                       max-h-[75vh] overflow-y-auto"
+          >
+            <nav className="flex flex-col divide-y divide-white/10">
+              <Link
+                href="/"
+                onClick={() => setOpen(false)}
+                className="px-6 py-5 text-lg hover:bg-white/5 transition"
+              >
+                Početna
+              </Link>
 
-        <Link
-          href="/"
-          onClick={() => setOpen(false)}
-          className="px-6 py-5 text-lg hover:bg-white/5 transition"
-        >
-          Početna
-        </Link>
+              <Link
+                href="/heating"
+                onClick={() => setOpen(false)}
+                className="px-6 py-5 text-lg hover:bg-white/5 transition"
+              >
+                Grejanje
+              </Link>
 
-        <Link
-          href="/heating"
-          onClick={() => setOpen(false)}
-          className="px-6 py-5 text-lg hover:bg-white/5 transition"
-        >
-          Grejanje
-        </Link>
+              <Link
+                href="/security"
+                onClick={() => setOpen(false)}
+                className="px-6 py-5 text-lg hover:bg-white/5 transition"
+              >
+                Sigurnost
+              </Link>
 
-        <Link
-          href="/security"
-          onClick={() => setOpen(false)}
-          className="px-6 py-5 text-lg hover:bg-white/5 transition"
-        >
-          Sigurnost
-        </Link>
+              <Link
+                href="/automation"
+                onClick={() => setOpen(false)}
+                className="px-6 py-5 text-lg hover:bg-white/5 transition"
+              >
+                Automatika
+              </Link>
 
-        <Link
-          href="/automation"
-          onClick={() => setOpen(false)}
-          className="px-6 py-5 text-lg hover:bg-white/5 transition"
-        >
-          Automatika
-        </Link>
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="px-6 py-5 text-lg font-semibold text-blue-400 hover:bg-white/5 transition"
+              >
+                Kontakt
+              </Link>
+            </nav>
 
-        <Link
-          href="/contact"
-          onClick={() => setOpen(false)}
-          className="px-6 py-5 text-lg font-semibold text-blue-400 hover:bg-white/5 transition"
-        >
-          Kontakt
-        </Link>
-      </nav>
-
-      {/* SCROLL HINT */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-8 
-                      bg-gradient-to-t from-zinc-900 to-transparent rounded-b-2xl" />
-    </div>
-  </>
-)}
+            {/* SCROLL HINT */}
+            <div
+              className="pointer-events-none absolute bottom-0 left-0 w-full h-8 
+                         bg-gradient-to-t from-zinc-900 to-transparent rounded-b-2xl"
+            />
+          </div>
+        </>
+      )}
+    </>
+  );
+}
