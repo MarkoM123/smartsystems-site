@@ -23,12 +23,20 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "SmartSystems BG" }],
   creator: "SmartSystems BG",
-  metadataBase: new URL("https://smartsystems-site1.vercel.app"),
+
+  // 🔴 OVO MENJAMO (NOVI DOMEN)
+  metadataBase: new URL("https://smartsystemsbg.cloud"),
+
+  // 🔴 GOOGLE SEARCH CONSOLE VERIFIKACIJA
+  verification: {
+    google: "hKCYscZWnquKUt1bChZ-28zmvPd1RTlwdJOwxHb3NwU",
+  },
+
   openGraph: {
     title: "SmartSystems BG | Pametni sistemi za dom i objekte",
     description:
-      "Pametno grejanje, sigurnost i automatika. Projektovanje i ugradnja smart home sistema u Beogradu. Sisteme projektuje inzenjer elektrotehnike",
-    url: "https://smartsystems-site1.vercel.app",
+      "Pametno grejanje, sigurnost i automatika. Projektovanje i ugradnja smart home sistema u Beogradu.",
+    url: "https://smartsystemsbg.cloud",
     siteName: "SmartSystems BG",
     images: [
       {
@@ -41,6 +49,7 @@ export const metadata: Metadata = {
     locale: "sr_RS",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "SmartSystems BG | Pametni sistemi",
@@ -49,6 +58,7 @@ export const metadata: Metadata = {
     images: ["/images/og-cover.jpg"],
   },
 };
+
 
 export default function RootLayout({
   children,
