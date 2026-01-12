@@ -55,14 +55,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sr">
-      <body className="bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 text-zinc-100 antialiased">
+    <html lang="sr" className="bg-zinc-950">
+  <body className="bg-zinc-950 text-zinc-100 antialiased overflow-x-hidden">
 
+
+        
         {/* HEADER – PRAVA KOMPONENTA */}
         <Header />
 
         {/* PAGE CONTENT */}
-        <main className="pt-24">
+        <main>
           {children}
         </main>
 
