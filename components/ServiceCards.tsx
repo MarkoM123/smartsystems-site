@@ -52,20 +52,24 @@ export default function ServiceCards() {
               transition={{ delay: i * 0.1 }}
               className="relative"
             >
-              {/* GLOW */}
-              <div
-                className="absolute inset-0 rounded-2xl 
-                bg-blue-600/10 opacity-0 group-hover:opacity-100 
-                blur-2xl transition pointer-events-none"
-              />
-
               {/* CARD */}
               <Link
                 href={service.href}
-                className="group block rounded-2xl overflow-hidden 
-                bg-zinc-900 border border-white/10 shadow-xl
-                transition-all duration-500
-                hover:-translate-y-2 hover:shadow-2xl"
+                className="
+                  group block h-full
+                  rounded-2xl overflow-hidden
+                  bg-zinc-900
+                  border border-white/10
+                  shadow-xl
+                  cursor-pointer
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-blue-500/40
+                  hover:shadow-2xl hover:shadow-blue-500/10
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-blue-500/50
+                "
               >
                 {/* IMAGE */}
                 <div className="relative h-56 overflow-hidden">
@@ -73,19 +77,35 @@ export default function ServiceCards() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover transition-transform duration-700 
-                    group-hover:scale-110"
+                    className="
+                      object-cover
+                      transition-transform duration-700
+                      group-hover:scale-110
+                    "
                   />
                 </div>
 
                 {/* TEXT */}
-                <div className="p-6">
+                <div className="relative p-6">
                   <h3 className="text-xl font-semibold text-white">
                     {service.title}
                   </h3>
                   <p className="mt-2 text-zinc-400">
                     {service.desc}
                   </p>
+
+                  {/* ARROW INDICATOR */}
+                  <span
+                    className="
+                      absolute bottom-6 right-6
+                      text-zinc-500 text-xl
+                      transition-all
+                      group-hover:text-blue-400
+                      group-hover:translate-x-1
+                    "
+                  >
+                    →
+                  </span>
                 </div>
               </Link>
             </motion.div>
