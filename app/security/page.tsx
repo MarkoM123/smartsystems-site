@@ -3,26 +3,6 @@ import SecurityWhy from "@/components/SecurityWhy";
 import SecurityUseCases from "@/components/SecurityUseCases";
 import SecurityProcess from "@/components/SecurityProcess";
 
-export const metadata = {
-  title: "Pametna sigurnost | Video nadzor i alarmni sistemi – Beograd",
-  description:
-    "Pametni sistemi sigurnosti: kamere, alarmi, pametne brave i daljinski nadzor. Profesionalna ugradnja u Beogradu.",
-
-  openGraph: {
-    title: "Pametna sigurnost | SmartSystems BG",
-    description:
-      "Video nadzor, alarmi i pametne brave za stanove i objekte.",
-    url: "https://smartsystems-site.vercel.app/security",
-    images: [
-      {
-        url: "https://smartsystems-site.vercel.app/images/service-security.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Pametna sigurnost – SmartSystems BG",
-      },
-    ],
-  },
-};
 
 export default function SecurityPage() {
   return (

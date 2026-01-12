@@ -8,26 +8,7 @@ import HeatingUseCases from "@/components/HeatingUseCases";
 import HeatingProcess from "@/components/HeatingProcess";
 import CTA from "@/components/CTA";
 
-export const metadata = {
-  title: "Pametno grejanje | Ušteda energije i kontrola temperature – Beograd",
-  description:
-    "Pametno upravljanje grejanjem: zoniranje po prostorijama, kontrola sa telefona i niži računi. Ugradnja u Beogradu.",
 
-  openGraph: {
-    title: "Pametno grejanje | SmartSystems BG",
-    description:
-      "Kontrolišite grejanje po prostorijama, smanjite potrošnju i povećajte komfor.",
-    url: "https://smartsystems-site.vercel.app/heating",
-    images: [
-      {
-        url: "https://smartsystems-site.vercel.app/images/service-heating.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Pametno grejanje – SmartSystems BG",
-      },
-    ],
-  },
-};
 
 
 export default function HeatingPage() {
