@@ -1,7 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import MobileMenu from "@/components/MobileMenu";
 
 
 
@@ -94,9 +93,6 @@ export default function RootLayout({
         </Link>
       </nav>
 
-      {/* MOBILE MENU */}
-      <MobileMenu />
-      
     </div>
   </div>
 </header>
