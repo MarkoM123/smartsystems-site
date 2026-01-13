@@ -42,7 +42,7 @@ export default function ServiceCards() {
         </motion.h2>
 
         {/* GRID */}
-        <div className="mt-20 grid md:grid-cols-3 gap-8">
+        <div className="mt-20 grid gap-8 md:grid-cols-3">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -52,20 +52,19 @@ export default function ServiceCards() {
               transition={{ delay: i * 0.1 }}
               className="relative"
             >
-              {/* CARD */}
               <Link
                 href={service.href}
                 className="
-                  group block h-full
+                  group relative block h-full
                   rounded-2xl overflow-hidden
                   bg-zinc-900
                   border border-white/10
-                  shadow-xl
-                  cursor-pointer
-                  transition-all duration-300
-                  hover:-translate-y-1
+                  shadow-lg
+                  transition-all duration-300 ease-out
+                  hover:-translate-y-2
                   hover:border-blue-500/40
                   hover:shadow-2xl hover:shadow-blue-500/10
+                  active:scale-[0.98]
                   focus-visible:outline-none
                   focus-visible:ring-2
                   focus-visible:ring-blue-500/50
@@ -79,34 +78,55 @@ export default function ServiceCards() {
                     fill
                     className="
                       object-cover
-                      transition-transform duration-700
+                      transition-transform duration-700 ease-out
                       group-hover:scale-110
                     "
                   />
+
+                  {/* IMAGE OVERLAY */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition" />
                 </div>
 
-                {/* TEXT */}
-                <div className="relative p-6">
+                {/* CONTENT */}
+                <div className="relative p-6 pb-14">
                   <h3 className="text-xl font-semibold text-white">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-zinc-400">
+
+                  <p className="mt-2 text-zinc-400 leading-relaxed">
                     {service.desc}
                   </p>
 
-                  {/* ARROW INDICATOR */}
+                  {/* CTA INDICATOR */}
                   <span
                     className="
-                      absolute bottom-6 right-6
-                      text-zinc-500 text-xl
+                      absolute bottom-5 right-6
+                      flex items-center gap-1
+                      text-sm font-medium
+                      text-zinc-500
                       transition-all
                       group-hover:text-blue-400
                       group-hover:translate-x-1
                     "
                   >
-                    →
+                    Saznaj više
+                    <span className="text-lg">→</span>
                   </span>
                 </div>
+
+                {/* GLOW */}
+                <div
+                  className="
+                    pointer-events-none
+                    absolute inset-0
+                    rounded-2xl
+                    opacity-0
+                    group-hover:opacity-100
+                    transition
+                    bg-gradient-to-br
+                    from-blue-500/10 via-transparent to-transparent
+                  "
+                />
               </Link>
             </motion.div>
           ))}
