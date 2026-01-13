@@ -2,14 +2,27 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen pt-[88px] flex items-center justify-center overflow-hidden bg-[#020617]">
 
-      {/* ANIMATED BACKGROUND */}
+      {/* BACKGROUND IMAGE */}
+      <Image
+        src="/images/hero-smart-home.jpg"
+        alt="Pametna kuća sa smart sistemima"
+        fill
+        priority
+        className="object-cover"
+      />
+
+      {/* DARK OVERLAY – da tekst ostane čitljiv */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* ANIMATED GRADIENT (SADA SU TILNIJI) */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 opacity-40"
         initial={{ backgroundPosition: "0% 50%" }}
         animate={{ backgroundPosition: "100% 50%" }}
         transition={{
@@ -24,7 +37,7 @@ export default function Hero() {
         }}
       />
 
-      {/* PARTICLE LAYER (CSS ONLY) */}
+      {/* PARTICLE LAYER */}
       <div className="absolute inset-0 pointer-events-none particles" />
 
       {/* VIGNETTE */}
@@ -49,7 +62,6 @@ export default function Hero() {
         >
           Grejanje • Sigurnost • Automatika
           <br />
-          Beograd
         </motion.p>
 
         <motion.div
